@@ -4,6 +4,7 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+/* header styles */
 header{
     width: 100%;
     height: 100%;
@@ -56,6 +57,9 @@ header{
     transition: transform 2s linear;
 }
 /* main section start  */
+
+
+/* player details style  */
 .container{
     margin-left: 180px;
     margin-right: 210px;
@@ -64,29 +68,24 @@ header{
 }
 .players{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 330px);
     grid-row-gap: 27px;
     grid-column-gap: 30px;
-    
-    
+    justify-content: center;
+       
 }
 .player{
-    width: 330px;
     height: 474px;
-    margin-bottom: 27px;
-    
+    padding: 15px;
     background-color: #FFFFFF;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
 .player-image{
     width: 300px;
     height: 256px;
-    margin: 15px;
 }
-.player-details{
-    margin: 15px;
-}
-/* Second Section start  */
+
+/* optional part start  */
 .second-container{
     display: flex;
     margin-bottom: 158px;
@@ -124,7 +123,20 @@ header{
     margin-top: 215px;
 
 }
-/* second section end  */
+/* Optional part end  */
+
+
+/* extra  section */
+.extra{
+    display: flex;
+    justify-content: center;
+    
+}
+/* extra section end  */
+/* -----------------
+                 Main end here 
+                                ------------- */
+
 /* ----------------Footer styles here -------------------- */
 .last-part{
     display: flex;
@@ -151,4 +163,104 @@ header{
     margin-left: 25.61%;
     margin-right: 25.61%;
     color: #000000;
+}
+/* footer end here  */
+
+
+/* --------------------
+     Media Queries
+-------------------- */
+
+/* Mobile Devices */
+@media only screen and (max-width:688px) {
+    header{
+        flex-direction: column;
+        width: 360px;
+        height: 750px;
+    }
+    .header-title{
+        margin-left: 16px;
+        margin-bottom: 30px;
+        width: 278px;
+        height: 138px;
+        font-size: 36px;
+    }
+    .anchor{
+        margin-left: 19px;
+        margin-bottom: 50px;
+    }
+    .header-right img{
+        width: 329px;
+        height: 259.17px;
+        margin-left: 15px;
+        margin-right: 16px;
+        margin-top: 50px;
+        margin-bottom: 61.83px;
+    }
+    .header-right:hover img{
+        transform: scale(1.1);
+        transition: transform 2s linear;
+    }
+    /* main section  */
+    .players{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .second-container{
+        flex-direction: column;
+    }
+    .container-left{
+        width: 329px;
+        height: 299px;
+        margin-left: 15px;
+        margin-right: 16px;
+        margin-top: 60px;
+        align-items: flex-start;
+    }
+    .h1-font{
+        width: 294px;
+        height: 80px;
+        font-size: 30px;
+    }
+    .paragraph{
+        width: 329px;
+        height: 143px;
+        margin-top: 8px;
+    }
+    .container-image img{
+        width: 328px;
+        height: 248px;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 78px;
+    }
+    /* extra part  */
+    .extra{
+        width: 50%;
+        height: 50%;
+      margin-left: 2px;
+      margin-right: 2px;
+        /* padding: 5px; */
+        align-items: center;
+    }
+    /* footer part  */
+    .footer img{
+        width: 275px;
+        height: 93px;
+        margin-left: 18px;
+        margin-right: 71px;
+    }
+    .footer-icon{
+        width: 170px;
+        height: 32px;
+        margin-left: 95px;
+        margin-right: 95px;
+    }
+    .copyright{
+        font-size: 18px;
+        font-weight: 400;
+        align-items: center;
+        margin-left: 17.22%;
+        margin-right: 17.22%;
+        margin-bottom: 2.42%
+    }
 }
